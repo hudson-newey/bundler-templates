@@ -1,0 +1,20 @@
+appName: ng-clean-run
+description: a script that clears angular cache and runs
+author: Hudson Newey
+version: 1.0
+license: MIT
+
+bundle-version: 1.1
+
+runtime: .
+source: .
+scripts:
+  - 'rm -r ./node_modules'
+  - 'rm -r ./.angular'
+  - 'npm cache clean --force'
+  - 'npm install'
+  - 'npm start'
+
+dependencies:
+  - npm
+  - rm
